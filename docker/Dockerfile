@@ -17,6 +17,7 @@ RUN chown -R indy:indy acapy-resolver-github
 USER $user
 
 RUN cd acapy-resolver-github; poetry install --no-dev
+RUN pip3 install -I --no-cache git+https://github.com/dbluhm/aries-cloudagent-python.git@feat/permissive-plugin-loading
 
 ENTRYPOINT ["/bin/bash", "-c", "aca-py \"$@\"", "--"]
 CMD ["start", "--arg-file", "default.yml"]
