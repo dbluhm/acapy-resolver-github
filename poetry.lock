@@ -117,7 +117,7 @@ uvloop = ["uvloop"]
 type = "git"
 url = "https://github.com/hyperledger/aries-cloudagent-python"
 reference = "main"
-resolved_reference = "87165c24e170d05c64bfa0e8160f2319c3d34d3f"
+resolved_reference = "f73cb72e5b5474294b6e2fcc3c73c40d7eb94909"
 
 [[package]]
 name = "async-timeout"
