@@ -1,7 +1,8 @@
 """Github Resolver."""
 
 import json
-from typing import Sequence
+import re
+from typing import Pattern
 
 import aiohttp
 from aries_cloudagent.core.profile import Profile
@@ -19,11 +20,12 @@ class GithubResolver(BaseDIDResolver):
 
     def __init__(self):
         super().__init__(ResolverType.NATIVE)
+        self._supported_did_regex = re.compile("^did:github:.*$")
 
     @property
-    def supported_methods(self) -> Sequence[str]:
+    def supported_did_regex(self) -> Pattern:
         """Return list of supported methods."""
-        return ["github"]
+        return self._supported_did_regex
 
     async def setup(self, context):
         """Setup the github resolver (none required)."""

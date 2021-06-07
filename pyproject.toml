@@ -8,8 +8,8 @@ license = "Apache-2.0"
 [tool.poetry.dependencies]
 python = "^3.6.9"
 aiohttp = "^3.6.2"
-aries-cloudagent = {git = "https://github.com/hyperledger/aries-cloudagent-python", rev = "main"}
-pydid = "^0.2.3"
+aries-cloudagent = {git = "https://github.com/hyperledger/aries-cloudagent-python", rev = "faab0345a3e7d189ef777d63dfa97e59883e875d"}
+pydid = "^0.3.0"
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.12.0"

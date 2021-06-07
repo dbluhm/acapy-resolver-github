@@ -17,4 +17,4 @@ def profile():
 @pytest.mark.asyncio
 async def test_resolve_dbluhm(resolver, profile):
     doc = await resolver.resolve(profile, "did:github:dbluhm")
-    assert doc.id == "did:github:dbluhm"
+    assert doc["id"] == "did:github:dbluhm"
